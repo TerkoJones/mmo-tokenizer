@@ -1,0 +1,21 @@
+{
+	"name": "mmo-tokenizer",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^17.0.5",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.10.0",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.7.0-dev.20220308",
+		"mmo-tester": "^1.0.2"
+	},
+	"scripts": {
+		"watch": "rimraf \"build\" && tsc --watch",
+		"build": "rimraf \"build\" && tsc",
+		"build:prod": "rimraf \"dist\" && tsc -p tsconfig.production.json",
+		"test": "node ./build/test/index.js",
+		"clean": "rimraf \"build\" \"dist\""
+	}
+}
